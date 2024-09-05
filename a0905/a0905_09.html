@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; height: 2000px;}
+    body{ background: url(img/s03.jpg) no-repeat;
+      background-size: cover;
+      background-position: 0 100px;
+      background-attachment: scroll;}
+      /* scroll 이미지 움직임 fixed 이미지 고정 */
+      #id1{width: 1200px; height: 700px; border: 3px solid orange;
+        background: url(img/s02.jpg) no-repeat;
+        background-size: cover;}
+        /* 가로 세로 (픽셀/퍼센트)로도 지정 가능 | contain: 비율이 작은 쪽에 맞춰서 이미지를 채움 | cover: 비율이 큰 쪽에 맞춰서 이미지를 채움 */
+        
+        /*
+    #id2{width: 1200px; height: 700px; border: 3px solid orange;
+      background: url(img/s03.jpg) no-repeat;
+      background-size: cover;
+      background-position: 0 100px;}
+      /* 포지션으로 이미지 이동 가능 px % */
+
+      background: url(img/s03.jpg) no-reapeat fixed right bottom;
+      /*background: url(img/s03.jpg);
+      background-repeat: no-reapet
+      background-size: cover;
+      background-position: 0 -100px;
+
+      */
+      
+  </style>
+</head>
+<body>
+  <div id="id2"></div>
+  <div id="id1"></div>
+  
+</body>
+</html>

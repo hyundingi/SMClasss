@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h3{width: 300px; height: 100px; border: 1px solid black;
+      white-space: nowrap; /* 자동 줄 넘김 해제*/
+      overflow: hidden; /* 테두리를 벗어나면 숨김 */
+      text-overflow: ellipsis;/* 말 줄임표*/}
+
+    h3:hover{white-space: normal; overflow: visible;} 
+    /* hover: 마우스가 위로 올라가면 ~ */
+
+    div{width: 300px; height: 100px; border: 1px solid black;
+    overflow: scroll; /*스크롤 생성*/}
+
+    p{width: 800px; height: 500px; border: 2px solid black;
+    font-size: 17px; 
+    font-weight: 400;  /*두께*/
+    line-height: 25px; /*즐간격*/ 
+    color: rgb(28, 214, 90, 0.4);
+    letter-spacing: 10px; /*글자간격(자간)*/
+    text-align: justify; /*양쪽 맞춤*/}
+    
+
+    h2{width: 700px; height:200px; 
+    border: 1px solid black;
+    color: rosybrown;
+    margin:0 auto; /*사각모델을 가운데 정렬 */
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px
+    /* 1.   line-height
+       2.   padding-top: 65px;
+       2-1. box-sizing: border-box; : 세로 가운데 정렬*/}
+    span{text-decoration: lightpink underline;
+        text-shadow: 5px 5px 2px #000; /* 폰트 그림자 가로px 세로px 흩부림px */
+        font-weight: 700;
+        word-spacing: 40px; /*단어간 자간*/}
+
+  </style>
+</head>
+<body>
+  <h3>인 수요가 크게 늘었다고 분석했습니다.</h3>
+
+  <div>오리온은 비쵸비가 지난해부터 한국을 찾은 외국인 관광객들 사이에서 '한국 여행 선물 과자'로 자리 잡으며 외국인 수요가 크게 늘었다고 분석했습니다.쵸비는 통밀로 만든 비스킷 사이에 통초콜릿을 넣은 샌드위치 비스킷입니다. 독특한 맛과 식감 등으로 인기를 끌며 출시 초기 품귀 현상까지 빚어진 바 있습니다.
+
+    오리온은 비쵸비가 지난해부터 한국을 찾은 외국인 관광객들 사이에서 '한국 여행 선물 과자'로 자리 잡으며 외국인 수요가 크게 늘었다고 분석했습니다.
+    </div>
+  <h2>글꼴 관련 스타일</h2>
+  <p>
+    
+오리온의 비스킷 '비쵸비'가 <span>'한국 여행 구매 필수템'</span>으로 인기를 얻으며 올해 매출액이 지난해 동기 대비 62% 증가했습니다.
+
+오늘(5일) 오리온에 따르면 올해 1월부터 8월까지 비쵸비 매출액은 지난해 동기 대비 62% 성장했습니다. 2022년 10월 출시 이후 누적 판매량은 1700만개입니다.
+
+비쵸비는 통밀로 만든 비스킷 사이에 통초콜릿을 넣은 샌드위치 비스킷입니다. 독특한 맛과 식감 등으로 인기를 끌며 출시 초기 품귀 현상까지 빚어진 바 있습니다.
+
+오리온은 비쵸비가 지난해부터 한국을 찾은 외국인 관광객들 사이에서 '한국 여행 선물 과자'로 자리 잡으며 외국인 수요가 크게 늘었다고 분석했습니다.
+
+오리온은 "SNS에 영어권을 비롯해 중국어, 일본어 등 각국의 언어로 '한국여행 기념품 추천' '패키지가 예뻐서 선물용으로 제격' '얼려먹어도 맛있다' 등 구매 인증 후기가 올라오면서 입소문이 난 것이 주효했다"며 "실제 서울역, 명동 등 외국인이 많이 찾는 관광지의 주요 슈퍼마켓 데이터를 자체 분석한 결과 올해 8월까지 매출이 전년 같은 기간 대비 360% 성장했다"고 밝혔습니다.
+  </p>
+  
+</body>
+</html>
