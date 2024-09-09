@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    img{width: 200px; display: inline-block;}
+    
+    /* visibility: hidden 공간을 남겨놓고 컨텐츠만 안 보임
+      display: none 공간도 사라짐 */
+
+    #i01:hover{visibility: hidden;}
+
+    span{width: 200px; height: 100px; display: inline-block; padding-left: 30px;
+    margin-left: 50px;}
+    #a01{background: yellow; border: 3px solid black;}
+    #a02{background: green; border: 3px solid black;}
+    #a03{background: gray; border: 3px solid black;}
+  </style>
+</head>
+<body>
+  <span id="a01">가나다</span>
+  <span id="a02">가나다</span>
+  <span id="a03">가나다</span>
+  <br/>
+  <img src="img/a01.jpg" alt="">
+  <img src="img/a02.jpg" alt="" id="i01">
+  <img src="img/a03.jpg" alt="">
+  <img src="img/a04.jpeg" alt="">
+  <button>버튼</button>
+</body>
+</html>
