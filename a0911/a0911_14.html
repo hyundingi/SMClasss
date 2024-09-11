@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Document</title>
+  <link rel="icon" href="img/favicon.ico" type="img/x-icon">
+  <title>쿡킷+사이드바+미디어쿼리</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
     *{margin: 0; padding: 0;
@@ -96,7 +97,7 @@ background: url(img/ico_set.png) -628px -320px no-repeat; background-size: 800px
     .write a{width: 120px; height: 50px; float: right;
     border: 2px solid black; line-height: 50px;}
 
-    #right_fixed{width: 118px; border: 1px solid #111;
+    #right_fixed{width: 118px; border: 1px solid #111;background: white;
     position: fixed; right: 0; top: 169px;}
     #right_fixed .chat{width: 118px; height: 118px; border-bottom: 1px solid black;}
     #right_fixed .chat div:nth-child(1){width: 38px; height: 40px;
@@ -126,6 +127,19 @@ background: url(img/ico_set.png) -628px -320px no-repeat; background-size: 800px
     #right_fixed .top:before{content: ""; background: url(img/spr_com.png) no-repeat;
    background-position: -107px -70px; width: 10px; height: 6px; display: inline-block; margin-right: 7px; }
 
+   @media screen and (max-width: 1400px){
+    #right_fixed{display: none;}
+   }
+
+   @media screen and (max-width: 1000px){
+    .logo{display: none;}
+    .quick_menu{display: none;}
+   }
+
+   @media screen and (max-width: 800px){
+    .number1{display: none;}
+    
+   }
   </style>
 </head>
 <body>
@@ -203,11 +217,11 @@ background: url(img/ico_set.png) -628px -320px no-repeat; background-size: 800px
       <head>
 
         <tr>
-          <th>No.</th>
+          <th class="number1">No.</th>
           <th>제목</th>
           <th>작성자</th>
           <th>작성일</th>
-          <th>조회수</th>
+          <th class="view">조회수</th>
         </tr>
       </head>
       <tbody id="tbody">
@@ -217,7 +231,7 @@ background: url(img/ico_set.png) -628px -320px no-repeat; background-size: 800px
         var data ="";
         for(var i=1;i<=10;i++){
           data += "<tr>";
-          data += "<td>"+i+"</td>";
+          data += "<td class='number1'>"+i+"</td>";
           data += "<td><a href=''>예방관련 안내</a></td>";
           data += "<td>관리자</td>";
           data += "<td>2024-09-10</td>";
