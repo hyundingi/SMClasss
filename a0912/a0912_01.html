@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 트렌스 폼 : translate, scale, rotate, skew :: 단순 변형
+      + 트렌지션 :: 애니메이션이 됨*/
+    *{margin: 0; padding: 0;}
+    .main{width: 200px; height: 200px; border: 1px solid black;
+    margin: 50px auto; overflow: hidden;
+    perspective: 200px;}
+    .move{transition: 0.5s all ease-in ; } /*트렌직션 - 시간차를 두고 바껴서 좀 더 부드러워짐*/
+    .move img{width: 200px; }
+    /* .move:hover{transform: translate(100px, 0);} 
+    .move:hover{transform: scaleX(0.5)}
+    .move:hover{transform: rotate(360deg);}
+    .move:hover{transform-origin: right top;}  */
+    /* .move:hover{transform: rotateX(360deg); backface-visibility: hidden}
+    반대쪽 면을 표시할지 말지 */
+    /* .move:hover{
+      transform: rotateX(180deg); 
+      transform: rotateY(180deg);
+      transform: rotateZ(180deg);} */
+    /* .move:hover{transform: skewX(100deg);} */
+
+    /* transform-origin: 기준점 설정
+    perspective: 원근감 (부모가 있는 쪽에 거는게 더 잘 됨)
+    translate( x축, y축): 축이동
+    scale : 크기 변형
+    rotate : 돌리기
+    skew : 대각선으로 돈다 */
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="move">
+      <img src="img/t01.png" alt="">
+    </div>
+  </div>
+  <div class="main">
+    <div class="move">
+      <img src="img/i01.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>

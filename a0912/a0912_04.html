@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{width: 100px; height: 100px; 
+    background: skyblue; border: 2px solid black;
+
+    /*animation-name: chg-back;
+    animation-iteration-count: infinite;  숫자 지정 가능, infinite: 무한대
+    animation-direction: alternate;  normal, alternate: 양방향
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation-delay: 0.5s; */
+
+    animation: chg-back 1s infinite alternate, rotate 2s infinite alternate;
+  }
+    @keyframes rotate{
+      form{
+        transform: perspective(120px) rotateX(0deg);
+      }
+      to{
+        transform: perspective(120px) rotateX(180deg);
+      }
+    }
+
+    @keyframes chg-back{
+      from{background: skyblue; 
+        border: 2px solid black;
+      }
+      to{
+        background: blue;
+        border: 3px solid red;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  
+</body>
+</html>
