@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function nbtn(event){
+      var num = document.getElementById("num").value;
+      if((num >= 'a' && num <= 'z') ){
+        
+        alert("영문 소문자 입니다.");
+      }else{
+        alert("영문 소문자가 아닙니다. 다시 입력하세요");
+        document.getElementById("num").value = "";
+        document.getElementById("num").focus();
+      }
+
+      
+    }
+  </script>
+</head>
+<body>
+  <form action="">
+    <label for="">숫자</label>
+    <input type="text" name="num" id="num">
+    <br/>
+    <input type="button" onclick="nbtn(event)" value="확인">
+  </form>
+</body>
+</html>

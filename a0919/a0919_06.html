@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>나의 체질량지수</title>
   <style>
     *{margin: 0; padding: 0;}
     .pop_header{width: 650px; height: 54px; background-color: #0aaf6b; }
@@ -11,7 +11,7 @@
       background: url(img/bullet-h1.png) 20px 50% no-repeat;}
 
     li{list-style: none; display: inline-block;}
-    .body{width: 650px; height: 804px; border: 1px solid black; padding: 20px; box-sizing: border-box;}
+    .body{width: 650px; height: 804px; padding: 20px; box-sizing: border-box;}
     .messagebox{width: 610px; height: 122px; 
     margin-bottom: 25px; padding: 25px; background: #f8f8f8; box-sizing: border-box;}
     .messagebox span{width: 560px; height: 72px; font-size: 14px; color: #454545; line-height: 24px; letter-spacing: -0.09em;}
@@ -73,7 +73,7 @@
         <input type="button" value="계산" id="btncalc" onclick="btn()">
         <input type="button" value="초기화">
         <div class="ment">
-          <span>비만도 결과</span><span id=""></span>
+          <span>비만도 결과</span><span id="resultText"></span>
           <span>BMI지수</span><span id="bminumber"></span>
         </div>
 
@@ -81,7 +81,23 @@
           function btn(){
             var cm = document.getElementById("height").value;
             var kg = document.getElementById("weight").value;
-            document.getElementById("bminumber").innerText = kg/((cm*0.01)*(cm*0.01))
+            var bmi = kg/((cm*0.01)*(cm*0.01));
+          
+            document.getElementById("bminumber").innerText = bmi.toFixed(2);
+
+            var resultText = "";
+            // bmi지수 판별
+            if(bmi >= 25){
+              resultText = "비만입니다.";
+            }else if(bmi >= 23){
+              resultText = "과체중입니다.";
+            }else if(bmi >= 18.5){
+              resultText = "정상입니다";
+            }else{
+              resultText = "저체중입니다";
+            }
+          
+            document.getElementById("resultText").innerText = resultText;
           }
 
         </script>
