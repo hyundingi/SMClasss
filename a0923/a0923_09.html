@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    #wrap{width: 1800px; height: 3000px; 
+    font-size: 30px; text-align: center;
+    background: url(img/spa.jpg);}
+    #txt{position: fixed; width: 200px; height: 100px; border: 1px solid black;}
+  </style>
+  <script>
+    // onclick, onchange, onfocus, onscroll .. >> 이벤트!
+    
+    // 스크롤이라는 이벤트가 발생하게 되면 평션 안에 있는 걸 실행
+    window.addEventListener('scroll', function(){
+      // console.log("스크롤을 이동햇음");
+      // console.log("스크롤 높이 : " + window.scrollY);
+      // document.getElementById("txt").innerText = window.scrollY;
+      document.getElementById("txt").innerText = window.scrollX;
+
+      if(window.scrollY > 1500){
+        document.getElementById("wrap").style.backgroundImage ="url('img/event02.jpg')";
+      }else{
+        document.getElementById("wrap").style.backgroundImage ="url('img/spa.jpg')";
+      }
+    });
+  
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="txt">
+      0
+    </div>
+  </div>
+  <button type="button" onclick="firstBtn()">처음으로 가기</button>
+  <script>
+    // scrollTo - 스크롤 이동, scrollY - 상하스크롤, scrollX - 좌우스크롤
+    function firstBtn(){
+      alert("처음 ㄱ")
+      window.scrollTo({top:0});
+    }
+  </script>
+  
+</body>
+</html>

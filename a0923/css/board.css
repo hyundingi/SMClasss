@@ -1,0 +1,530 @@
+.sub_banner{
+  width: 100%;
+  height: 320px;
+  background: url(../img/bg_topBg1_2.jpg) no-repeat;
+}
+
+/* 섹션 section 부분 게시판 */
+
+section{
+  width: 1200px; 
+  height: 850px;
+  margin: 30px auto;
+   text-align: center;
+}
+
+section .sub_naviloc{
+ font-size: 12px;
+ font-weight: 500;
+ color: #777;
+ float: right;
+}
+
+section h1{
+  font-size: 40px; 
+  text-align: center; 
+  margin: 40px 0 30px; 
+  font-weight: 700;
+}
+section table, th, td{
+  border-collapse: collapse;
+}
+
+section table{
+  width: 1200px; 
+  margin: 0 auto; 
+  text-align: center; 
+  border-top: 2px solid black; 
+  border-bottom: 2px solid black;
+}
+
+section th, td{
+  height: 42px;
+}
+
+section th{
+  border-bottom: 1px solid silver; 
+  font-size: 16px; 
+  font-weight: 700;
+  background: #f3f3f3;
+}
+
+section td{
+  border-bottom: 1px solid silver;
+}
+
+section td:nth-child(2){
+  text-align: left; 
+  padding-left: 10px;
+}
+
+.wrapper{
+  width: 340px; 
+  height: 200px; 
+  margin: 0 auto 30px;
+}
+
+.wrapper select{
+ width: 80px;
+ height: 40px; 
+ border: 1px solid #666; 
+ box-sizing: border-box;
+ background: url(../img/search-box-select.png) no-repeat 90%;
+ appearance: none; 
+ padding: 5px;
+}
+
+.wrapper #search_txt{
+  width: 200px; 
+  height: 40px; 
+  box-sizing: border-box; 
+  padding-left: 10px;
+  font-size: 16px; 
+  border: 1px solid #666;
+  position: relative; 
+  top: 2px;
+}
+.wrapper button{
+  width: 40px; 
+  height: 40px; 
+  background: #666; 
+  color: white;
+border: none; 
+font-size: 16px;
+position: relative; 
+top: 2px;
+}
+
+.frmInput{
+  width: 340px;
+}
+
+
+.page-num{
+  width: 100%; 
+  text-align: center; 
+  display: flex; 
+  margin-top: 35px; 
+  justify-content: center;
+font-size: 16px;
+}
+
+.page-num li{
+  width: 38px; 
+  height: 35px; 
+  border: 1px solid #989898; 
+margin: 0 3px; 
+line-height: 32px; 
+box-sizing: border-box;
+}
+
+.page-num .first{
+  background: url(../img/paging_first.png) no-repeat; 
+  background-size: 36px 35px;
+  border: none; 
+}
+.page-num .prev{
+  background: url(../img/paging_prev.png) no-repeat; 
+  background-size: 36px 35px; 
+  border: none;
+}
+
+.page-num .next{
+  background: url(../img/paging_next.png) no-repeat;
+  background-size: 36px 35px; 
+  border: none;
+}
+
+.page-num .last{
+  background: url(../img/paging_last.png) no-repeat; 
+  background-size: 36px 35px; 
+  border: none;
+}
+
+.write a{
+  width: 120px; 
+  height: 50px; 
+  float: right;
+border: 2px solid black; 
+line-height: 50px;
+}
+
+#right_fixed{
+  width: 118px; 
+  border: 1px solid #111;
+  background: white;
+position: fixed; 
+right: 0; 
+top: 169px;
+}
+
+#right_fixed .chat{
+  width: 118px; 
+  height: 118px; 
+  border-bottom: 1px solid black;
+}
+
+#right_fixed .chat div:nth-child(1){
+  width: 38px; 
+  height: 40px;
+margin: 0 auto; 
+background: url(../img/ic_speechbubble.svg) 50% 50% no-repeat; 
+padding-top: 30px;
+}
+
+#right_fixed .chat div:nth-child(2){
+  width: 100%; 
+  text-align: center;
+  font-size: 13px; 
+  color: #111; 
+  letter-spacing: -0.26px;
+}
+
+#right_fixed .ai_chat{
+  width: 118px; 
+  height: 118px; 
+  border-bottom: 1px solid black;
+}
+
+#right_fixed .ai_chat div:nth-child(1){
+  width: 38px; 
+  height: 40px;
+margin: 0 auto; 
+padding-top: 30px; 
+background: url(../img/ico_chatai_big.svg) 50% 50% no-repeat;
+}
+
+#right_fixed .ai_chat div:nth-child(2){
+  width: 100%; 
+  text-align: center;
+font-size: 13px; 
+color: #111; 
+letter-spacing: -0.26px;
+}
+
+#right_fixed .items{
+  font-size: 13px; 
+  text-align: center; 
+  letter-spacing: -1px;
+color: #333; 
+background: #f3f3f3;
+width: 118px; 
+height: 45px; 
+line-height: 45px;
+}
+
+#right_fixed .items:after{
+  content:""; 
+  background: url(../img/spr_com.png) no-repeat;
+background-position: -80px -68px; 
+display: inline-block; 
+margin-left: 7px;
+width: 12px; 
+height: 8px;
+}
+
+#right_fixed .top{
+  font-size: 13px; 
+  text-align: center; 
+  letter-spacing: -1px;
+color: #333; 
+background: #f3f3f3;
+width: 118px; 
+height: 30px; 
+line-height: 25px;
+border-top: 1px solid #ddd; 
+}
+
+#right_fixed .top:before{
+  content: ""; 
+  background: url(../img/spr_com.png) no-repeat;
+background-position: -107px -70px; 
+width: 10px; 
+height: 6px; 
+display: inline-block; 
+margin-right: 7px; 
+}
+
+/* 로그인 부분 */
+
+.section{
+  width: 450px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.category ul {
+  width: 100%;
+  height: 30px;
+  margin: 40px 0 20px;
+  color: #606060;
+  display: flex;
+}
+
+.category li {
+  width: 90px;
+  height: 14px;
+  font-size: 13px;
+  text-align: left;
+  font-weight: 600;
+  line-height: 12px;
+}
+
+.category li a{
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.category li a:hover{
+  display: inline-block;
+  font-weight: 600;
+  border-bottom: 5px black solid;
+}
+
+/* .category .selected {
+  color: black !important;
+  font-weight: 600;
+  border-bottom: 5px black solid;
+}  */
+
+.section form input{
+ width: 100%;
+ height: 38px;
+ border: 2px solid #ccc;
+ font-size: 16px;
+ padding-left: 10px;
+ box-sizing: border-box;
+}
+
+.selected form input:focus{
+  outline: 0;
+}
+
+.section form .id_group{
+  display: flex;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.section form .id_group .save{
+  width: 150px;
+  height: 26px;
+  text-align: left;
+}
+
+.section form .id_group .save input[type="checkbox"] {
+  display: none;
+}
+
+.save input[type="checkbox"]+label {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url(../img/ico_set.png) 0 -40px no-repeat;
+  background-size: 800px 800px;
+  padding-left: 26px;
+  box-sizing: border-box;
+}
+
+.save input[type="checkbox"]:checked+label {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url(../img/ico_set.png) -26px -40px no-repeat;
+  background-size: 800px 800px;
+  padding-left: 26px;
+  box-sizing: border-box;
+}
+
+.save span{
+  position: relative;
+  top: -7px;
+}
+
+.section form .id_group .find{
+  width: 300px;
+  height: 31px;
+  text-align: right;
+}
+
+.section form button{
+  width: 450px;
+  height: 55px;
+  background: #bdd61a;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  margin-top: 16px;
+}
+
+/* 아이콘 부분 */
+.login-icons{
+  margin: 30px auto 0;
+  width: 360px;
+  height: 53px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.login-icons li{
+  width: 53px;
+  height: 48px;
+}
+
+/* 회원정보 안내 부분 */
+
+.sign-up-info{
+  width: 450px;
+  height: 210px;
+  margin-top: 35px;
+  padding: 20px 15px 25px;
+  background: #f7f7f7;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.sign-up-info h3{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sign-up-info .sign-up{
+  width: 260px;
+  height: 50px;
+  margin-top: 15px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 50px;
+  background: white;
+  border: 2px solid #ccc;
+}
+
+.sign-up-info .sign-up .arrow{
+  width: 18px;
+  height: 18px;
+  background: url(../img/ico_set.png) -635px 0 no-repeat;
+  background-size: 800px 800px;
+  display: inline-block;
+  position: relative;
+  top: 15px;
+}
+
+footer{
+  width: 100%;
+  height: 265px;
+  margin-top: 160px;
+  background: #1d1d1d;
+}
+
+.footer{
+  width: 1290px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+}
+
+.footer .ftnavi{
+  width: 1042px;
+  height: 265px;
+}
+
+.ftnavi ul{
+ display: flex;
+ box-sizing: border-box;
+ padding-top: 52px;
+}
+
+.ftnavi li{
+  display: flex;
+  color: white;
+}
+
+.ftnavi li a{
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  margin: 0 34px 10px 0;
+}
+
+.ftnavi li:nth-child(3) a, 
+.ftnavi li:nth-child(4) a{
+  font-size: 14.28px;
+  font-weight: 600;
+}
+
+.ftnavi .addr{
+  padding-top: 32px;
+  color: #767676;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+}
+
+.ftnavi .addr p{
+  margin-bottom: 5px;
+}
+
+.ftnavi .addr .add span{
+  margin: 0 7px;
+  color: #767676;
+}
+
+.ftnavi .addr .tel span{
+  margin: 0 20px;
+}
+
+.ftnavi .addr .copy{
+  padding-top: 20px;
+  font-size: 11px;
+  font-weight: 100;
+  letter-spacing: 0.08em;;
+}
+
+.footer .rightnavi{
+  width: 248px;
+  height: 265px;
+  box-sizing: border-box;
+}
+
+.footer .rightnavi .ftsns{
+  float: right;
+  margin-top: 100px;
+}
+
+.footer .rightnavi .ftsns a{
+  margin-left: 8px;
+}
+
+.footer .rightnavi .ftgroup{
+  float: right;
+}
+
+.footer .rightnavi .ftgroup .sel_box{
+  width: 168px;
+  height: 40px;
+  border: 1px solid #666;
+  font-size: 12px;
+  background: none;
+  color: #666;
+  padding-left: 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.footer .rightnavi .ftgroup .sel_box:focus{
+  outline: 0;
+}
+
+.footer .rightnavi .ftgroup .sel_box img{
+  display: inline-block;
+  position: relative;
+}
+
+.footer .rightnavi .ftgroup button{
+  width: 50px;
+  height: 40px;
+  font-size: 13px;
+  color: #666;
+  background: none;
+  border: 1px solid #666;
+}

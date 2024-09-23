@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 - 배열선언(굉장히 중요)</title>
+</head>
+<body>
+  <script>
+    var a = 10;
+    var b = 20;
+    var c = 30;
+    var d = 40;
+    var e = 50;
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
+
+    //배열선언
+    var arr = new Array(5); // >> 라는 방에 3개의 공간을 만들고 싶어.
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+    arr[3] = 40;
+    arr[4] = 500;
+    
+    // console.log(arr[0]);
+    // console.log(arr[1]);
+    // console.log(arr[2]);
+
+    for (var i=0;i<5;i++){
+      console.log(arr[i]);
+    }
+
+    // for (var i=0;i<5;i++){
+    //   arr[i] = i*10+10
+    //   console.log(arr[i])
+    // }
+    // 선언에 값지정 필요없이 같은 값을 내보낼 수 있음.
+
+
+    //배열선언2 (더 많이 씀)
+    var cArr = [10, 20, 30];
+
+    // console.log(cArr[0]);
+    // console.log(cArr[1]);
+    // console.log(cArr[2]);
+
+    for (var i=0;i<5;i++){
+      console.log(cArr[i]);
+    }
+
+    //배열 : []대괄호 사용, 방 이름이 있다 ([0] ~ )
+  </script>
+  
+</body>
+</html>

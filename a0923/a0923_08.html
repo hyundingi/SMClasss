@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 오늘 날짜를 출력하시오 2024/09/23/ 월요일
+
+    var today = new Date();
+
+    var year = today.getFullYear();
+    var month = "0"+(today.getMonth()+1);
+    var date = today.getDate();
+    var day = today.getDay();
+    var tday;
+    if(day==0) tday = "일요일"
+    else if (day==1) tday = "월요일"
+    else if (day==2) tday = "화요일"
+    else if (day==3) tday = "수요일"
+    else if (day==4) tday = "목요일"
+    else if (day==5) tday = "금요일"
+    else tday = "토요일"
+
+    document.write("오늘 날짜는 "+year+"/"+month+"/"+date+"/ "+tday+" 입니다. <br/>")
+
+    // 5자리 숫자를 입력받아, 숫자의 합을 구하시오.
+    // 12345 = 15
+    // charAt 사용
+
+    var num = prompt("7자리 숫자를 입력하시오.");
+    var num1 = Number(num.charAt(0));
+    var num2 = Number(num.charAt(1));
+    var num3 = Number(num.charAt(2));
+    var num4 = Number(num.charAt(3));
+    var num5 = Number(num.charAt(4));
+    
+    var total =  num1 + num2 + num3 + num4 + num5
+    document.write("숫자의 합 : " + total + " 입니다.");
+    
+    var total2 = 0;
+    for (var i=0;i<7;i++){
+      total2 += Number(num.charAt(i))
+    }
+    document.write("숫자의 합 : " + total2 + " 입니다.");
+
+
+
+  </script>
+  
+</body>
+</html>
