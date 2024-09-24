@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>부모창</h1>
+  <input type="button" value="팝업창 열기" onclick="openPop()">
+  <br/>
+  <br/>
+  <label>팝업창으로 값 전달</label>
+  <input type="text" id="p_input">
+  <input type="button" value="값 전달" onclick="send_text()">
+  <hr>
+  <label>자식으로부터 받은 값</label>
+  <input type="text" id="pp_input">
+
+  <script>
+    var openPage;
+
+    function openPop(){
+      //alert("팝업창 버튼 클릭");
+      //window.name = "parentForm";
+      openPage = window.open("child.html", "childForm", "width=570, height=350 resizeble=no, scrollbars=no");
+       //불러올 파일명, 폼이름, 사이즈, 사이즈 변경 안 됨, 스크롤 안 됨
+    }
+
+    function send_text(){
+      //alert("값전달버튼클릭");
+      openPage.document.getElementById("c_input").value = document.getElementById("p_input").value;
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 함수 정의(선언)
+    function a_input(){
+      console.log(1);
+      console.log(2);
+      b_input(); // 함수 호출
+    }
+
+    // 함수 정의(선언)
+    function b_input(){
+      document.write("안녕하세요.");
+    }
+
+
+    //매개변수
+    function calc(a, b, c){
+      var a = (document.getElementById("txt1").value*1)
+      var b = (document.getElementById("txt2").value*1)
+      var c = (document.getElementById("txt3").value*1)
+      return (a+b+c)
+    }
+
+    //함수선언
+    function send_txt(){
+      // 퀴즈 txt1, txt2, tx3 을 입력받아 calc에 넣고 더하기는 c1에 출력
+
+      var data = calc(10,20,30);
+      document.querySelector("#c1").innerText = data;
+
+    }
+
+  </script>
+  <button onclick="a_input()">함수호출</button>
+  <br/>
+  <div id="c1"></div>
+  <input type="text" id="txt1"><br/>
+  <input type="text" id="txt2"><br/>
+  <input type="text" id="txt3"><br/>
+  <button onclick="send_txt()">확인</button>
+  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #txt{width: 100px; height: 40px; border: 1px solid black; text-align: center;}
+  </style>
+  <script>
+
+    //전역변수 - 어디에 있던 사용 가능
+    var a = 10;
+    var b = 50;
+
+    //function == 함수선언
+    function add_num(){
+      //지역변수 - 안에 있으면 안에 있는거만 사용 가능함
+      //var c = 5; 
+      document.querySelector("#txt").innerText = a+b;
+    }
+
+    function minus_num(){
+      document.querySelector("#txt").innerText = a-b;
+    }
+
+    function x_num(){
+      document.querySelector("#txt").innerText = a*b;
+    }
+    function xx_num(){
+      document.querySelector("#txt").innerText = a/b;
+    }
+  </script>
+</head>
+<body>
+  <div id="txt">0</div>
+  <button onclick="add_num()">더하기</button>
+  <button onclick="minus_num()">빼기</button>
+  <button onclick="x_num()">곱하기</button>
+  <button onclick="xx_num()">나누기</button>
+  
+</body>
+</html>

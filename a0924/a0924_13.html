@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>제이쿼리</title>
+  <script>
+    //제이쿼리 선언
+    $(document).ready(function(){
+      
+    });
+    //제이쿼리 선언(약식)
+    $(function(){
+      $("#d01").text("안녕하세요");
+      $(".c01").text("안녕하세요");
+      
+      $("#d01").html("<h1>안녕하세요</h1>");
+
+      $("#d01").css("background", "yellow");
+      //document.querySelector("#d01").style.backgroundColor = "yellow"
+
+
+      $("#wrap").attr("src", "img/i2.jpg"); //속성 값 변경
+      //document.querySelector("#wrap").setAttribute("src", "img/i2.jpg");
+      
+    });
+
+  </script>
+  <style>
+   #d01{width: 300px; height: 200px; border: 1px solid black;}
+   #wrap{width: 500px; height: 400px; overflow: hidden;}
+   img{width: 100%;}
+  </style>
+</head>
+<body>
+  <div id="d01"></div>
+  <div class="c01"></div>
+  <!-- <script>
+    document.querySelector("#d01").innerText = "ㅎㅇ";
+    제이쿼리는 돌고 한번 더 돌아서 id 아래에 넣어도 제이쿼리가 반영됨 
+  </script> -->
+
+
+  <div>
+    <img id="wrap" src="img/i1.jpg" alt="">
+  </div>
+ 
+</body>
+</html>
