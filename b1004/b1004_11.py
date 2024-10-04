@@ -46,13 +46,13 @@ while True:
   elif choice == '3':
     print("[학생성적수정]")
     print()
-    count = 0
     while True:
       name = input("[뒤로가기: 0] 수정하고자 하는 학생이름을 입력하세요. >> ")
       if name == '0':
         break
 
       for s in students:
+        count = 0
         if s[1] == name:
           print(f"{name} 학생을 찾았습니다.")
           print("[과목선택]")
