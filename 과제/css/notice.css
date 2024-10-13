@@ -1,0 +1,39 @@
+.notice_list{
+    width: 96%;
+    margin: 70px auto;
+    line-height: 40px;
+}
+
+.notice_list tr{
+    text-align: left;
+}
+
+.notice_list th{
+    background: white;
+    padding: 10px 0 10px 20px;
+}
+
+.notice_list td{
+    padding: 5px 0 5px 20px;
+}
+
+.notice_list td img{
+    width: 80%;
+}
+
+.notice_list td span{
+    display: inline-block;
+    width: 65px;
+    font-weight: 700;
+    border-right: 1px solid #e0e0e0;
+    margin-right: 20px;
+}
+
+section .list{
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 15px 10px 0;
+    border: 2px solid black;
+    float: right;
+}
