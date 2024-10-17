@@ -1,0 +1,20 @@
+aaa,1111,홍길동,Niland,70771 Claremont Crossing,80000000
+bbb,2222,유관순,Galvin,5 Stephen Hill,60000000
+ccc,3333,이순신,Serle,12 Stoughton Terrace,100000000
+caimer3,8819,Chris,Aimer,4 Autumn Leaf Terrace,100000000
+bmendenhall4,7438,Benedict,Mendenhall,5 Butterfield Lane,50000000
+bfulcher5,4084,Barry,Fulcher,312 Kings Center,60000000
+mtyzack6,1688,Myrah,Tyzack,8 Lawn Crossing,50000000
+ccopcote7,2024,Courtenay,Copcote,302 Buhler Crossing,90000000
+ddoldon8,4473,Dre,Doldon,08 Veith Circle,90000000
+ghanburybrown9,3412,Gustie,Hanbury-Brown,68386 Hovde Lane,90000000
+wdiggensa,2318,Welbie,Diggens,09390 Shopko Plaza,70000000
+rdaringtonb,3449,Rasla,Darington,243 Meadow Ridge Drive,50000000
+rliccardic,4538,Rockwell,Liccardi,51776 Grim Lane,80000000
+droslingd,1990,Delores,Rosling,4 East Court,60000000
+doleaghame,4360,Darnell,O'Leagham,326 Fisk Avenue,90000000
+nskpseyf,4430,Nadeen,Skpsey,4 Oneill Junction,80000000
+csnozzwellg,3024,Collie,Snozzwell,05233 Alpine Street,50000000
+jprobyh,2982,Jeanie,Proby,0694 Garrison Plaza,70000000
+afitzpayni,2876,Andee,Fitzpayn,49651 Badeau Alley,90000000
+gkerj,8637,Glennie,Ker,27 Milwaukee Center,90000000
