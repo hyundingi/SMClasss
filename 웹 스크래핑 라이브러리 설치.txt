@@ -1,0 +1,15 @@
+1) 웹 크롤링 
+자동화 봇이 일정 규칙에 따라 복수 개의 웹 페이지를 브라우징 하는 것
+html 페이지를 가져와서, 필요한 데이터만 추출하는 기법
+open API 를 제공하는 서비스에 API를 호출해서 받은 데이터 중 필요한 데이터만 추출하는 기법 
+selenium 
+
+2) 웹 스크래핑
+하는 목적 : 웹에 있는 정보 자동화해서 가져옴 (웹 데이터 수집)
+
+pip install requests  -  웹 정보 요청하는 라이브러리
+
+pip install beautifulsoup4  -  html 및 xml 파일에서 원하는 데이터를 손쉽게 parsing 할 수 있는 python 라이브러리
+
+pip install lxml  -  lxml을 설치하면 css 문법으로 특성 요소를 쉽게 가져올 수 있는 python 라이브러리
+
