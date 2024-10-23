@@ -13,3 +13,11 @@ pip install beautifulsoup4  -  html 및 xml 파일에서 원하는 데이터를 
 
 pip install lxml  -  lxml을 설치하면 css 문법으로 특성 요소를 쉽게 가져올 수 있는 python 라이브러리
 
+-----------------------------------------------------------------------------------------------------------------
+
+- requests : html(웹페이지) 읽어오기 | 빠르다 | 동적 웹페이지 x
+- selenium : 웹페이지 자동화         | 느리다 | 동적 웹페이지 open
+===================== > beautifulsoup(원하는 데이터 추출 : 웹스크래핑)
+
+pip install selenium
+
