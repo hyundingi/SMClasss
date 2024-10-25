@@ -52,7 +52,7 @@ smtpPort = 587
 
 # id, pw, 받는사람이메일주소
 sendEmail = 'qo0723@naver.com'
-pw = 'xhfpxk99'
+pw = '1111'
 recvEmail = 'bhj0723@gmail.com'
 
 # 설정
