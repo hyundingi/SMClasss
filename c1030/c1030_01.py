@@ -80,7 +80,7 @@ while True:
       print(f'로그인 성공! {row[2]}님, 환영합니다.')
     else:
       print('아이디 또는 패스워드가 일치하지 않습니다. 정확히 입력하세요!!!')
-      continue
+      break
 
     cursor.close()
     # if user_id == 'aaa' and user_pw == '1111':
@@ -104,14 +104,17 @@ while True:
 
     if row != None:
       print('아이디가 존재합니다. 임시패스워드를 발급합니다. ')
-      mailling()
+      choice = input('임시 비밀번호를 발급할까요? \n 1) 예  2) 아니요')
+      if choice == '1':
+        print('임시비밀번호를 발급합니다.')
+        mailling()
       # 1. 임시비밀번호 생성
       # 2. 이메일로 보냄
       # 3. 아이디 비밀번호 > 임시비밀번호로 수정
       # 4. 임시번호로 로그인 햇을 경우 성공
-      sql = 'update member set pw = :pw where id = :id'
-      cursor. execute(sql, id=search, pw=ran_num)
-      conn.commit()
+        sql = 'update member set pw = :pw where id = :id'
+        cursor. execute(sql, id=search, pw=ran_num)
+        conn.commit()
     else:
       print('아이디가 존재하지 않습니다.')
     
