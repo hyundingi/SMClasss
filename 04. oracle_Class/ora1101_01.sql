@@ -261,7 +261,17 @@ insert into mem values (
 commit;
 
 select * from mem;
+select department_id, count(*) from employees, departments where department_id = 50 group by department_id ;
 
+select count(*), a.department_id, department_name from employees a, departments b 
+where a.department_id = b.department_id and a.department_id = 50 group by a.department_id, department_name ;
+
+insert into mem values (
+'ddd','1111','강감찬','22','20220312','Male','game',sysdate
+);
+rollback;
+
+select * from mem;
 
 
 
