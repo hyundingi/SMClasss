@@ -2,6 +2,8 @@ import oracledb
 
 s_title = ['번호','이름','국어','영어','수학','합계','평균','등수','등록일']
 
+# rows 를 보내는 게 아니라 sql 구문을 보내서 프린트 함수 선언 다시 짜보기
+# 검색 출력은 rows, search >> *data 
 
 # db연결 함수선언
 def connects():
@@ -79,7 +81,7 @@ def stu_print(s_title):
   cursor.close()
 
 # 학생성적검색 함수 선언
-def stu_search(choice, s_title):
+def stu_search(choice):
   conn = connects()
   cursor = conn.cursor()
 
@@ -102,7 +104,7 @@ def stu_search(choice, s_title):
   conn.close()
 
 # 학생성적정렬 함수 선언
-def stu_line(choice, s_title):
+def stu_line(choice):
   conn = connects()
   cursor = conn.cursor()
   if choice == '1':

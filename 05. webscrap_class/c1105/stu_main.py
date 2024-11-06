@@ -1,6 +1,6 @@
 import stu_func
 
-
+# 강사님 파일 함수(*data) 있는 프린트 부분 확인하기
 
 while True:
   print('[학생성적프로그램]')
