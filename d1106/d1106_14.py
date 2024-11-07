@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 # --------- 데이터 가져오기
 movie_lists = []
 for r in range(2020,2024):
-  with open(f'd1106/movie2022.html','r',encoding='utf-8') as f:
+  with open(f'd1106/movie{r}.html','r',encoding='utf-8') as f:
     soup = BeautifulSoup(f,'lxml')
 
   # 1. 2020년 ~ 2023년 영화 제목 / 관객수 : 숫자입력 / 날짜 이미지저장
@@ -31,8 +31,9 @@ for r in range(2020,2024):
     m_v = movies_view[i].next.replace('누적','').replace('만명','0000').replace(',','').strip()
     m_d = movies_date[i].next.strip()
 
-
-    movie_list = [r, m_t, int(m_v), m_d]
+    with open(f'd1106/movie{r}.csv', 'a', encoding='utf-8-sig') as f:
+      movie_list = [r, m_t, int(m_v), m_d]
+      f.write(f'{r},{m_t},{int(m_v)},{m_d}\n')
     movie_lists.append(movie_list)
     
 print(movie_lists)
