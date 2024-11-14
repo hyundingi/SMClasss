@@ -1,0 +1,128 @@
+ip : 네트워크 컴퓨터 주소
+dns (domaim name system) : 도메인 주소를 ip주소로 변환
+www.naver.com > 211.1.1.2
+
+client > 웹서버 > 애플리케이션 서버 > db
+
+[웹서버] (정적 웹서버)
+- 주로 정적인 요청 처리
+- 동적인 데이터 요청시 애플리케이션 서버에 전달
+- 프로그램과 상관없는 외적인 요소 담당 (ip차단 등)
+
+[애플리케이션 서버] (동적 웹서버) (디장고)
+- 주로 동적인 데이터 요청 처리
+- database 연동
+
+[디장고 설치]
+1. 업그레이드
+pip install --upgrade pip
+2. 디장고 설치
+pip install Django
+pip install Django --upgrade
+
+[디장고 위치 확인]
+python -c 'import django; print(django.__path__)'
+
+터미널 이동 방법
+cd.. >> 이전 폴더로
+cd (폴더명)  >> 폴더열기
+
+
+*** 디장고 프로젝트
+[프로젝트 생성]
+django-admin startproject tempPjt
+예)
+django-admin startproject shopmall
+django-admin startproject community 등 폴더명 
+
+
+[데이터베이스 설치 - DB테이블]
+~~ 있는지 먼저 확인 하고 설치해야함
+------ db에 테이블 설치, 변경, 삭제, 추가
+python manage.py migrate
+------ db에 반영할 변경된 것이 있는지 확인
+python manage.py makemigrations
+------ db 데이터 넣기
+python manage.py shell
+
+------ 관리자 등록
+python manage.py createsuperuser
+------ 서버 구동
+python -u manage.py runserver 0.0.0.0:8000
+------ 브라우저 url
+http://127.0.0.1:8000/
+------ 관리자 페이지
+http://127.0.0.1:8000/admin
+
+
+[애플리케이션 생성]
+-- manage.py 사용 (프로젝트 외 무조건 manage.py 사용)
+python manage.py startapp students
+
+>>>>>>>
+1. 프로젝트 만들기
+2. 애플리케이션 만들기
+3. 작업 후 migrate
+4. 관리자 등록
+5. 서버구동
+
+
+[db호출]
+> python manage.py shell
+> 호출 ) from students.models import Student
+> 삽입 ) qs = Student(s_name='hong1', s_major='컴퓨터공학', s_age=20, s_grade=1, s_gender='M') 
+> 커밋 ) qs.save()
+> 삽입 ) qs = Student(s_name='you1', s_major='국문학',s_age=22,s_grade=3,s_gender='F') 
+> 커밋 ) qs.save()
+
+-- select 
+qs = Student.objects.all()
+print(qs)
+qs[0].s_name .....
+
+-- select 에 1명만 가져오기
+qs = Student.objects.get(s_name='hong1')
+qs.s_name
+
+-- update
+qs = Student.objects.get(s_name='hong1')
+qs.s_age = 25
+qs.save()
+
+-- delete
+qs = Student.objects.get(s_name='hong1')
+qs.delete
+qs.save()
+
+
+----- tempPjt 에 settings.py 수정
+1) INSTALLED_APPS =  추가
+2) LANGUAGE_CODE = 'ko-kr'
+3) TIME_ZONE = 'Asia/Seoul'
+
+
+
+
+
+!! mvc 패턴
+urls.py > view.py
+
+-----------
+
+[프로젝트 폴더 이름 변경]
+-- project 폴더에서 실행
+move tempPjt tempProject
+
+html 자동완성키 설정
+1. auto close tag 확장팩 설치
+2. ctrl + 쉼표 > 설정창
+3. setting 검색
+
+
+
+
+-----------------------
+project urls 
+./ : 현재 폴더에서 뒤에 붙이기
+../ : 이전 폴더에서 뒤에 붙이기
+
