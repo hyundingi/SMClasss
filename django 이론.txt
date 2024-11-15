@@ -1,3 +1,5 @@
+----------- 11월 14일 수업
+
 ip : 네트워크 컴퓨터 주소
 dns (domaim name system) : 도메인 주소를 ip주소로 변환
 www.naver.com > 211.1.1.2
@@ -68,28 +70,43 @@ python manage.py startapp students
 
 
 [db호출]
+[ORM 명령어]
 > python manage.py shell
 > 호출 ) from students.models import Student
 > 삽입 ) qs = Student(s_name='hong1', s_major='컴퓨터공학', s_age=20, s_grade=1, s_gender='M') 
 > 커밋 ) qs.save()
-> 삽입 ) qs = Student(s_name='you1', s_major='국문학',s_age=22,s_grade=3,s_gender='F') 
-> 커밋 ) qs.save()
+> 삽입 ) Student.objects.create(s_name='you1', s_major='국문학',s_age=22,s_grade=3,s_gender='F') 
+> 커밋 ) x -- 세이브 없이 저장이 됨
 
--- select 
+-- select 전체검색
+Student.objects.all()
 qs = Student.objects.all()
-print(qs)
 qs[0].s_name .....
 
 -- select 에 1명만 가져오기
-qs = Student.objects.get(s_name='hong1')
-qs.s_name
+qs = Student.objects.get(s_name='hong1')            >>> Student 객체타입                            qs.s_name
+qs = Student.objects.filter(s_name='hong1')         >>> QuerySet : 1개가 넘어와도 일단 리스트 형태   qs[0].s_name
+qs
 
--- update
+-- 비교검색
+ex ) qs = Student.objects.filter(s_age__lt=21)
+__lt  : ~ 보다 작다
+__lte : ~ 보다 작거나 같다
+__gt  : ~ 보다 크다
+__gte : ~ 보다 크거나 같다
+__isnull : 널값인 자료 검색
+__isnotnull : 널값이 아닌 자료 검색
+__contains : 특정 문자열 포함
+__startwith : 특정 문자열로 시작
+__endwith  : 특정 문자열로 끝
+
+-- update : 해당데이터 검색 후, 컬럼에 값을 입력하면 수정됨
 qs = Student.objects.get(s_name='hong1')
 qs.s_age = 25
 qs.save()
 
 -- delete
+Student.objects.get(s_name='hong1').delete
 qs = Student.objects.get(s_name='hong1')
 qs.delete
 qs.save()
@@ -99,8 +116,6 @@ qs.save()
 1) INSTALLED_APPS =  추가
 2) LANGUAGE_CODE = 'ko-kr'
 3) TIME_ZONE = 'Asia/Seoul'
-
-
 
 
 
@@ -119,10 +134,10 @@ html 자동완성키 설정
 3. setting 검색
 
 
-
-
 -----------------------
 project urls 
 ./ : 현재 폴더에서 뒤에 붙이기
 ../ : 이전 폴더에서 뒤에 붙이기
 
+
+------------------ 11월 15일 수업
