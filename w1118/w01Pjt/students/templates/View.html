@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>학생상세페이지</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    #main{text-align: center; margin-top: 50px;}
+    table, td, th{border: 1px solid black; border-collapse: collapse;}
+    table{margin: 30px auto;}
+    th, td{height: 40px; width: 150px;}
+    button{width: 150px; heigth: 40px;}
+  </style>
+</head>
+<body>
+  <div id='main'>
+    <h2>학생상세페이지</h2>
+    <table>
+      <tr>
+        <th>타이틀</th>
+        <th>정보</th>
+      </tr>
+      {% if stu %}
+        <tr>
+          <td>이름</td>
+          <td>{{stu.name}}</td>
+        </tr>
+        <tr>
+          <td>학과</td>
+          <td>{{stu.major}}</td>
+        </tr>
+        <tr>
+          <td>학년</td>
+          <td>{{stu.grade}}</td>
+        </tr>
+        <tr>
+          <td>나이</td>
+          <td>{{stu.age}}</td>
+        </tr>
+        <tr>
+          <td>성별</td>
+          <td>{{stu.gender}}</td>
+        </tr>
+      {% else %}
+        <tr>
+          <td colspan='2'>데이터가 존재하지 않습니다.</td>
+        </tr>
+      {% endif %}
+    </table>
+    <a href="/students/list/"><button>리스트</button></a>
+    <a href="/students/{{ stu.name }}/modify/"><button>url 수정1</button></a>
+    <a href="/students/modify2?name={{stu.name}}"><button>파라미터, 수정2</button></a>
+    <a href="{% url 'students:modify3' stu.name %}"><button>appName, 수정3</button></a>
+    <button type='button', onclick='deleteBtn("{{ stu.name }}")'>삭제</button>
+    <script>
+      function deleteBtn(name){
+        if (confirm(name + '님의 정보를 삭제하시겠습니까?')){
+          location.href = '/students/'+name+'/delete/'
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

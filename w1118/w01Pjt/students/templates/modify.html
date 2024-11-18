@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학생성적수정</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    #main{text-align: center; margin-top: 50px;}
+    label{width: 150px; display: inline-block;}
+    .r{width: 50px;}
+    input[type='submit'], button{width: 150px; height: 40px; text-align: center;}
+
+  </style>
+</head>
+<body>
+  <div id='main'>
+    <h2><a href="/">학생성적수정</a></h2>
+    <h2>{{ stu }}</h2>
+    <!-- 이름으루 url 연결하기 -->
+    {% comment %} <form action="{% url 'students:update' %}", method='post', name='sfrm'> {% endcomment %}
+    <form action="/students/{{ stu.name }}/modify/", method='post', name='sfrm'>
+    <!-- <form action='students/write', method='post', name='sfrm'>-->
+      {% csrf_token %}
+      {% comment %} <label for="">이름</label> {% endcomment %}
+      <input type="hidden", name='name' value='{{stu.name}}'><br>
+      <label for="">학과</label>
+      <input type="text", name='major' value='{{stu.major}}'><br>
+      <label for="">학년</label>
+      <input type="text", name='grade' value='{{stu.grade}}'><br>
+      <label for="">나이</label>
+      <input type="text", name='age' value='{{stu.age}}'><br>
+      <div>성별 : {{ stu.gender }}</div>
+      <label for="">성별</label>
+      <input type="radio", name='gender', id='M', value='M' {% if stu.gender == 'M' %} checked {% endif %}>
+      <label for="M" class='r'>남자</label>
+      <input type="radio", name='gender', id='F', value='F' {% if stu.gender == 'F' %} checked {% endif %}>
+      <label for="F" class='r'>여자</label><br>
+
+      <input type="submit", value='수정'>
+      <button type='button' onclick='cancel()'>수정취소</button>
+    </form>
+    <script>
+      function cancel(){
+        location.href='/students/list/'
+      }
+    </script>
+  </div>
+
+  
+</body>
+</html>
