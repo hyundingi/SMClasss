@@ -147,3 +147,9 @@ project urls
 1. form action
 2. app name url
 3. url
+
+
+
+
+render : 데이터도 전송
+ridirect : 그냥 url만 전송할 때
